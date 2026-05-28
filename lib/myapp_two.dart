@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_003/country.dart';
-import 'package:flutter_app_003/myapp_two.dart';
+import 'country.dart';
 
-void main() {
-  runApp(MyAppTwo()); //cambiar aqui
+class MyAppTwo extends StatefulWidget {
+  const MyAppTwo({super.key});
+
+  @override
+  State<MyAppTwo> createState() => _MyAppTwoState();
 }
 
-/// Esta parte hizo pero me perdi porfavor ayuda en esto
-class MyApp extends StatelessWidget {
+class _MyAppTwoState extends State<MyAppTwo> {
   final List<String> listCountries = [
     'Mexico',
     'Colombia',
@@ -98,7 +99,6 @@ class MyApp extends StatelessWidget {
     'Ecuador',
     'Bolivia',
   ];
-  //const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -205,7 +205,6 @@ class MyApp extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            setState(() {});
             print("Presionaste el boton flotante");
             listCountries.add("Nuevo país");
           },
@@ -214,6 +213,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
-  void setState(Null Function() param0) {}
 }
